@@ -3,7 +3,7 @@
   "textures": {
     "particle": "appletreemod:block/apple_leaves",
     "leaves": "appletreemod:block/apple_leaves",
-    "flower": "appletreemod:block/apple_flower_leaves_stage_0"
+    "flower": "appletreemod:block/apple_flower_leaves"
   },
   "elements": [
     {
