@@ -29,7 +29,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.LEAVES)
                 .add(
                         ModBlocks.APPLE_LEAVES.get(),
-
+                       //ここにapple_flower_leavesを入れるとエラーになる。なんで。
+                        // Caused by: java.lang.IllegalArgumentException: Couldn't define tag minecraft:leaves as it is missing following references: appletreemod:apple_flower_leaves
 
                 ModBlocks.ORNAMENTAL_APPLE_FLOWER_LEAVES.get(),
                 ModBlocks.ORNAMENTAL_APPLE_UNRIPE_LEAVES.get(),
@@ -53,6 +54,18 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                         ModBlocks.APPLE_WOOD.get(),
                         ModBlocks.STRIPPED_APPLE_WOOD.get()
                 );
+
+        // ←採掘速度に効くのはこっち
+        tag(BlockTags.MINEABLE_WITH_AXE).add(
+                ModBlocks.APPLE_SLAB.get(),
+                ModBlocks.APPLE_FENCE.get(),
+                ModBlocks.APPLE_FENCE_GATE.get(),
+                ModBlocks.APPLE_DOOR.get(),
+                ModBlocks.APPLE_TRAPDOOR.get(),
+                ModBlocks.APPLE_STAIRS.get(),
+                ModBlocks.APPLE_BUTTON.get(),
+                ModBlocks.APPLE_PRESSURE_PLATE.get()
+        );
 
 
         this.tag(BlockTags.PLANKS).add(ModBlocks.APPLE_PLANKS.get());

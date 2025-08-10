@@ -62,14 +62,6 @@ public class ModBlocks {
             "apple_flower_leaves",
             () -> new AppleFlowerLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
 
-    public static final RegistryObject<Block> APPLE_UNRIPE_LEAVES = BLOCKS.register(
-            "apple_unripe_leaves",
-            () -> new AppleFlowerLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
-
-    public static final RegistryObject<Block> APPLE_FRUIT_LEAVES = BLOCKS.register(
-            "apple_fruit_leaves",
-            () -> new AppleFlowerLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
-
     public static final RegistryObject<Block> ORNAMENTAL_APPLE_FLOWER_LEAVES = BLOCKS.register(
             "ornamental_apple_flower_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
