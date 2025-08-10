@@ -22,10 +22,14 @@
             "Name": "appletreemod:apple_flower_leaves",
             "Properties": {
               "age": "0",
-              "distance": "7",
-              "persistent": "true",
-              "waterlogged": "false"
-            }
+              "distance": "7"
+                        }
+          },
+          "weight": 1
+        },
+        {
+          "data": {
+            "Name": "appletreemod:apple_leaves"
           },
           "weight": 1
         },
@@ -33,9 +37,8 @@
           "data": {
             "Name": "appletreemod:apple_leaves",
             "Properties": {
-              "distance": "7",
-              "persistent": "true",
-              "waterlogged": "false"
+              "distance": "7"
+
             }
           },
           "weight": 1
