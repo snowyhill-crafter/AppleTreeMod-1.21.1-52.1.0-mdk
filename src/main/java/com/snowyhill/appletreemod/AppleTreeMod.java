@@ -38,7 +38,9 @@ public class AppleTreeMod {
 
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
+    private void commonSetup(final FMLCommonSetupEvent event)
+    {
+     //ModFlammablesから可燃性を参照
         event.enqueueWork(ModFlammables::register);
     }
 

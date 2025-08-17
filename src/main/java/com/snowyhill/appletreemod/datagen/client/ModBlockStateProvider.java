@@ -18,8 +18,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        sapling(ModBlocks.APPLE_SAPLING);
-        item(ModBlocks.APPLE_SAPLING);//saplingだとitemmodelが自動生成されない？
+
         logBlock((RotatedPillarBlock) ModBlocks.APPLE_LOG.get());
         item(ModBlocks.APPLE_LOG);//ログブロックとアクシズブロックはアイテムモデルを自動生成しないし作っても消される。
 
@@ -63,10 +62,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         ModBlocks.APPLE_PRESSURE_PLATE.get(),
                 blockTexture(ModBlocks.APPLE_PLANKS.get()));
 
-
-
         simpleLeaves(ModBlocks.APPLE_LEAVES);
         simpleLeaves(ModBlocks.APPLE_FLOWER_LEAVES);
+
+        // --- 1) 苗木: cross + cutout（1回だけ） ---
+        ModelFile saplingModel = models()
+                .cross(regPath(ModBlocks.APPLE_SAPLING.get()), modLoc("block/apple_sapling"))
+                .renderType("cutout");
+        simpleBlock(ModBlocks.APPLE_SAPLING.get(), saplingModel);
+
+        // --- 2) 鉢植え苗木: flower_pot_cross 親 + plant テクスチャ（1回だけ） ---
+        ModelFile pottedModel = models()
+                .withExistingParent(regPath(ModBlocks.POTTED_APPLE_SAPLING.get()), mcLoc("block/flower_pot_cross"))
+                .texture("plant", modLoc("block/apple_sapling"))
+                .renderType("cutout");
+        simpleBlock(ModBlocks.POTTED_APPLE_SAPLING.get(), pottedModel);
+
+
 
     }
 
@@ -80,6 +92,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 AppleTreeMod.MOD_ID + ":block/" +
                         ForgeRegistries.BLOCKS.getKey(block.get()).getPath()
         ));
+    }
+
+    /** 登録パス（apple_sapling など） */
+    private static String regPath(Block b) {
+        return ForgeRegistries.BLOCKS.getKey(b).getPath();
     }
 
     // 普通の葉ブロック

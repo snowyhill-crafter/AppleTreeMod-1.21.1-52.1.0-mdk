@@ -6,6 +6,7 @@ import com.snowyhill.appletreemod.tag.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 
@@ -65,8 +66,17 @@ public class ModRecipeProvider extends RecipeProvider {
         pressurePlate(pRecipeOutput,
                 ModBlocks.APPLE_PRESSURE_PLATE.get(),
                 ModBlocks.APPLE_PLANKS.get());
-        
-        
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModBlocks.APPLE_PIE.get()) // BlockでもOK（ItemLike）
+                .pattern("AAA")
+                .pattern("SES")
+                .pattern("WWW")
+                .define('A', Items.APPLE)
+                .define('S', Items.SUGAR)
+                .define('E', Items.EGG)
+                .define('W', Items.WHEAT) // ← wheat はタグではなくアイテムでOK
+                .unlockedBy("has_apple", has(Items.APPLE))
+                .save(pRecipeOutput);
         
         
     }

@@ -15,7 +15,7 @@ public class ModItems {
     // アイテムを作成＆レジストリに登録
 
 
-    public static final RegistryObject<Item> APPLE_SAPLING = ITEMS.register("apple_sapling",
+    public static final RegistryObject<Item> APPLE_SAPLING_ITEM = ITEMS.register("apple_sapling",
             () -> new BlockItem(ModBlocks.APPLE_SAPLING.get(), new Item.Properties())
     );
 
@@ -116,7 +116,8 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.APPLE_PRESSURE_PLATE.get(), new Item.Properties())
     );
 
-
+    public static final RegistryObject<Item> APPLE_PIE_ITEM = ITEMS.register("apple_pie",
+            () -> new BlockItem(ModBlocks.APPLE_PIE.get(), new Item.Properties()));
 
 
 
