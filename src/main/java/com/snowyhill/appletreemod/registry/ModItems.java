@@ -48,6 +48,11 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.APPLE_LEAVES.get(), new Item.Properties())
     );
 
+    public static final RegistryObject<Item> APPLE_FLOWER_LEAVES_ITEM = ITEMS.register(
+            "apple_flower_leaves",
+            () -> new BlockItem(ModBlocks.APPLE_FLOWER_LEAVES.get(), new Item.Properties())
+    );
+
 
     public static final RegistryObject<Item> ORNAMENTAL_APPLE_FLOWER_LEAVES_ITEM = ITEMS.register(
             "ornamental_apple_flower_leaves",

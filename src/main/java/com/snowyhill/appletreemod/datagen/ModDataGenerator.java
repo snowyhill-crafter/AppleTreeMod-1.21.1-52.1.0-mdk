@@ -52,6 +52,9 @@ public class ModDataGenerator {
             // GlobalLootModifier
             generator.addProvider(event.includeServer(),
                     new ModGlobalLootModifierProvider(packOutput, lookupProvider));
+
+
+
         }
     }
 

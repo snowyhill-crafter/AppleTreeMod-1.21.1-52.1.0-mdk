@@ -29,11 +29,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.LEAVES)
                 .add(
                         ModBlocks.APPLE_LEAVES.get(),
-
-
-                ModBlocks.ORNAMENTAL_APPLE_FLOWER_LEAVES.get(),
-                ModBlocks.ORNAMENTAL_APPLE_UNRIPE_LEAVES.get(),
-                ModBlocks.ORNAMENTAL_APPLE_FRUIT_LEAVES.get()
+                        ModBlocks.APPLE_FLOWER_LEAVES.get(),
+                        ModBlocks.ORNAMENTAL_APPLE_FLOWER_LEAVES.get(),
+                        ModBlocks.ORNAMENTAL_APPLE_UNRIPE_LEAVES.get(),
+                        ModBlocks.ORNAMENTAL_APPLE_FRUIT_LEAVES.get()
                 );
 
         this.tag(BlockTags.LOGS)
@@ -54,6 +53,18 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                         ModBlocks.STRIPPED_APPLE_WOOD.get()
                 );
 
+        // ←採掘速度に効くのはこっち
+        tag(BlockTags.MINEABLE_WITH_AXE).add(
+                ModBlocks.APPLE_SLAB.get(),
+                ModBlocks.APPLE_FENCE.get(),
+                ModBlocks.APPLE_FENCE_GATE.get(),
+                ModBlocks.APPLE_DOOR.get(),
+                ModBlocks.APPLE_TRAPDOOR.get(),
+                ModBlocks.APPLE_STAIRS.get(),
+                ModBlocks.APPLE_BUTTON.get(),
+                ModBlocks.APPLE_PRESSURE_PLATE.get()
+        );
+        this.tag(BlockTags.SAPLINGS).add(ModBlocks.APPLE_SAPLING.get());
 
         this.tag(BlockTags.PLANKS).add(ModBlocks.APPLE_PLANKS.get());
         this.tag(BlockTags.SLABS).add(ModBlocks.APPLE_SLAB.get());

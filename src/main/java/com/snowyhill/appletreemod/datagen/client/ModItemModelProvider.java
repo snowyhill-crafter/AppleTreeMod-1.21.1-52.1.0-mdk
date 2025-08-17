@@ -32,6 +32,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         button(ModBlocks.APPLE_BUTTON,
                 ModBlocks.APPLE_PLANKS);
 
+        sapling(ModBlocks.APPLE_SAPLING);
     }
 
     public void itemWithBlock(RegistryObject<Block> block) {
@@ -56,10 +57,12 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .texture("texture",  ResourceLocation.fromNamespaceAndPath(AppleTreeMod.MOD_ID,
                         "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
-    private void sapling(RegistryObject<Block> block) {
-        this.withExistingParent(block.getId().getPath(),
-                ResourceLocation.fromNamespaceAndPath("namespace", "path")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(AppleTreeMod.MOD_ID,"block/" + block.getId().getPath()));
+    private void sapling(RegistryObject<Block> sapling) {
+        String name = ForgeRegistries.BLOCKS.getKey(sapling.get()).getPath();
+        // 親は "minecraft:item/generated"
+        withExistingParent(name, mcLoc("item/generated"))
+                // 苗木の見た目は block テクスチャ1枚
+                .texture("layer0", modLoc("block/" + name));
     }
 
 

@@ -67,9 +67,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleLeaves(ModBlocks.APPLE_LEAVES);
         simpleLeaves(ModBlocks.APPLE_FLOWER_LEAVES);
-        simpleLeaves(ModBlocks.APPLE_UNRIPE_LEAVES);
-        simpleLeaves(ModBlocks.APPLE_FRUIT_LEAVES);
-
 
     }
 

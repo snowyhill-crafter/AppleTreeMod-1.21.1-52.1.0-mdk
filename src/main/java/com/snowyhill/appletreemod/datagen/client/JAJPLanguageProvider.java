@@ -33,7 +33,7 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.APPLE_DOOR, "リンゴのドア");
         addBlock(ModBlocks.APPLE_TRAPDOOR, "リンゴのトラップドア");
         addBlock(ModBlocks.APPLE_BUTTON, "リンゴのボタン");
-        addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "Apple Pressure Plate");
+        addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "リンゴの感圧板");
 
         add("creativetabs.Mod_tab", "リンゴの木MOD");
 

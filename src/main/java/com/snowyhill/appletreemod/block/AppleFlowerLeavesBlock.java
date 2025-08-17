@@ -3,6 +3,7 @@ package com.snowyhill.appletreemod.block;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -136,10 +137,39 @@ public class AppleFlowerLeavesBlock extends LeavesBlock implements BonemealableB
 
     @Override
     public void performBonemeal(ServerLevel pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
-        int i = Math.min(MAX_AGE, pState.getValue(AGE) + 1);
-        pLevel.setBlock(pPos, pState.setValue(AGE, Integer.valueOf(i)), 2);
-    }
+        int before = pState.getValue(AGE);
+        if (before < MAX_AGE) {
+            int after = before + 1;
+            BlockState grown = pState.setValue(AGE, Integer.valueOf(after));
 
+            // 成長を反映
+            pLevel.setBlock(pPos, grown, 2);
+            pLevel.gameEvent(net.minecraft.world.level.gameevent.GameEvent.BLOCK_CHANGE, pPos, net.minecraft.world.level.gameevent.GameEvent.Context.of(grown));
+
+            // ---- ここから演出（“成長したときだけ”出す）----
+
+            // バニラの骨粉キラキラ（green sparkles）
+            // levelEvent(2005, pos, data) は骨粉演出。data は 0 で OK
+            pLevel.levelEvent(2005, pPos, 0);
+
+            // 追加のハッピービレジャー粒子（お好み）
+            double cx = pPos.getX() + 0.5D;
+            double cy = pPos.getY() + 0.7D;
+            double cz = pPos.getZ() + 0.5D;
+            int count = 6 + pRandom.nextInt(5); // 6～10個
+            pLevel.sendParticles(ParticleTypes.HAPPY_VILLAGER, cx, cy, cz, count, 0.25D, 0.25D, 0.25D, 0.0D);
+
+            // 効果音（骨粉使用音）
+            pLevel.playSound(
+                    null, pPos,
+                    SoundEvents.BONE_MEAL_USE,
+                    SoundSource.BLOCKS,
+                    0.8F,
+                    0.9F + pRandom.nextFloat() * 0.2F
+            );
+        }
+    }
+    //可燃性と延焼
     @Override
     public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
         return 60;
@@ -149,6 +179,5 @@ public class AppleFlowerLeavesBlock extends LeavesBlock implements BonemealableB
     public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
         return 30;
     }
-
 
 }
