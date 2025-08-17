@@ -15,6 +15,7 @@ public class JAJPLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         addBlock(ModBlocks.APPLE_SAPLING, "リンゴの苗木");
+        addBlock(ModBlocks.POTTED_APPLE_SAPLING, "植木鉢に植えたリンゴの苗木");
         addBlock(ModBlocks.APPLE_LOG, "リンゴの原木");
         addBlock(ModBlocks.STRIPPED_APPLE_LOG, "樹皮を剥いだリンゴの原木");
         addBlock(ModBlocks.APPLE_WOOD, "リンゴの木");
@@ -33,7 +34,9 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.APPLE_DOOR, "リンゴのドア");
         addBlock(ModBlocks.APPLE_TRAPDOOR, "リンゴのトラップドア");
         addBlock(ModBlocks.APPLE_BUTTON, "リンゴのボタン");
-        addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "Apple Pressure Plate");
+        addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "リンゴの感圧板");
+
+        addBlock(ModBlocks.APPLE_PIE, "アップルパイ");
 
         add("creativetabs.Mod_tab", "リンゴの木MOD");
 

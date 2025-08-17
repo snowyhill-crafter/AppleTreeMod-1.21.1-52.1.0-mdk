@@ -1,10 +1,7 @@
 package com.snowyhill.appletreemod.registry;
 
 import com.snowyhill.appletreemod.AppleTreeMod;
-import com.snowyhill.appletreemod.block.AppleFlowerLeavesBlock;
-import com.snowyhill.appletreemod.block.ModLeavesBlock;
-import com.snowyhill.appletreemod.block.ModLogBlock;
-import com.snowyhill.appletreemod.block.ModStrippableLogBlock;
+import com.snowyhill.appletreemod.block.*;
 import com.snowyhill.appletreemod.worldgen.tree.ModTreeGrowers;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -30,7 +27,10 @@ public class ModBlocks {
             () -> new SaplingBlock(ModTreeGrowers.APPLE_TREE,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
-
+    public static final RegistryObject<Block> POTTED_APPLE_SAPLING = BLOCKS.register("potted_apple_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT,
+                    ModBlocks.APPLE_SAPLING,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING)));
 
     public static final RegistryObject<Block> APPLE_LOG = BLOCKS.register("apple_log",
             () -> new ModStrippableLogBlock(
@@ -60,14 +60,6 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> APPLE_FLOWER_LEAVES = BLOCKS.register(
             "apple_flower_leaves",
-            () -> new AppleFlowerLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
-
-    public static final RegistryObject<Block> APPLE_UNRIPE_LEAVES = BLOCKS.register(
-            "apple_unripe_leaves",
-            () -> new AppleFlowerLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
-
-    public static final RegistryObject<Block> APPLE_FRUIT_LEAVES = BLOCKS.register(
-            "apple_fruit_leaves",
             () -> new AppleFlowerLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
 
     public static final RegistryObject<Block> ORNAMENTAL_APPLE_FLOWER_LEAVES = BLOCKS.register(
@@ -124,18 +116,19 @@ public class ModBlocks {
             () -> new PressurePlateBlock(BlockSetType.OAK,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
 
-
+    public static final RegistryObject<Block> APPLE_PIE = BLOCKS.register("apple_pie",
+            () -> new ApplePieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE).noOcclusion()));
 
 
     // ブロック＆アイテムを作成
-    private static <T extends Block> RegistryObject<T> registerBlockWithItem(String name, Supplier<T> supplier) {
+  //  private static <T extends Block> RegistryObject<T> registerBlockWithItem(String name, Supplier<T> supplier) {
         // ブロックレジストリにブロックを登録
-        RegistryObject<T> block = BLOCKS.register(name, supplier);
-        // アイテムレジストリにBlockItemを登録
-        ModItems.ITEMS.register(name,
-                () -> new BlockItem(block.get(), new Item.Properties()));
-        return block;
-    }
+//        RegistryObject<T> block = BLOCKS.register(name, supplier);
+//        // アイテムレジストリにBlockItemを登録
+//        ModItems.ITEMS.register(name,
+//                () -> new BlockItem(block.get(), new Item.Properties()));
+//        return block;
+
 
     // イベントバスに登録
     public static void register(IEventBus eventBus) {

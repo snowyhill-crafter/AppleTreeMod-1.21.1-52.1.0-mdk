@@ -39,7 +39,7 @@ public class ModFeatures {
                         BlockStateProvider.simple(ModBlocks.APPLE_LOG.get()),
                         new StraightTrunkPlacer(5, 1, 0),// 少し短く、分岐なしで自然な幹
 
-                        // ここで葉をランダム化。ティックの不具合回避のため実の成長なし。実を直接呼び出す。
+                        // ここで葉をランダム化。
                         new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                                 .add(ModBlocks.APPLE_FLOWER_LEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true), 1)
                                 .add(ModBlocks.APPLE_LEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true), 1))
@@ -48,6 +48,8 @@ public class ModFeatures {
                         new BlobFoliagePlacer(ConstantInt.of(2), // 半径
                                 ConstantInt.of(0), 3),// 左：高さオフセット　右：葉の高さ
                         new TwoLayersFeatureSize(1, 0, 1)// 樹冠サイズ（低く丸く）
+
+
                 ).build()
         );
 

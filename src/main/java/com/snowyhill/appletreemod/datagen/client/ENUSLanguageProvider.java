@@ -16,6 +16,7 @@ public class ENUSLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         addBlock(ModBlocks.APPLE_SAPLING, "Apple Sapling");
+        addBlock(ModBlocks.POTTED_APPLE_SAPLING, "Potted Apple Sapling");
         addBlock(ModBlocks.APPLE_LOG, "Apple Log");
         addBlock(ModBlocks.STRIPPED_APPLE_LOG, "Stripped Apple Log");
         addBlock(ModBlocks.APPLE_WOOD, "Apple Wood");
@@ -35,6 +36,8 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.APPLE_TRAPDOOR, "Apple Trapdoor");
         addBlock(ModBlocks.APPLE_BUTTON, "Apple Button");
         addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "Apple Pressure Plate");
+
+        addBlock(ModBlocks.APPLE_PIE, "Apple Pie");
 
         add("creativetabs.Mod_tab", "appletreemod");
 

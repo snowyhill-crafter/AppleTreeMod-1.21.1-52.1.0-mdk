@@ -21,12 +21,12 @@ public class ModTabs {
                     // タブのタイトルを設定
                     .title(Component.translatable("creativetabs.appletreemod_tab"))
                     // タブのアイコンを設定
-                    .icon(ModItems.APPLE_SAPLING.get()::getDefaultInstance)
+                    .icon(ModItems.APPLE_SAPLING_ITEM.get()::getDefaultInstance)
                     // タブにアイテムを追加（必須）
                     .displayItems((pParameters, pOutput) -> {
 
 
-                        pOutput.accept(ModItems.APPLE_SAPLING.get());
+                        pOutput.accept(ModItems.APPLE_SAPLING_ITEM.get());
                         pOutput.accept(ModItems.APPLE_LOG_ITEM.get());
                         pOutput.accept(ModItems.STRIPPED_APPLE_LOG_ITEM.get());
                         pOutput.accept(ModItems.APPLE_WOOD_ITEM.get());
@@ -46,7 +46,7 @@ public class ModTabs {
                         pOutput.accept(ModItems.APPLE_BUTTON_ITEM.get());
                         pOutput.accept(ModItems.APPLE_PRESSURE_PLATE_ITEM.get());
 
-
+                        pOutput.accept(ModItems.APPLE_PIE_ITEM.get());
 
 
 

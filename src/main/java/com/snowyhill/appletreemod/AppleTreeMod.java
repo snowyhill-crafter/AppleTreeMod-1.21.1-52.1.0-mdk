@@ -2,6 +2,7 @@ package com.snowyhill.appletreemod;
 
 import com.mojang.logging.LogUtils;
 import com.snowyhill.appletreemod.registry.ModBlocks;
+import com.snowyhill.appletreemod.registry.ModFlammables;
 import com.snowyhill.appletreemod.registry.ModItems;
 import com.snowyhill.appletreemod.registry.ModTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -37,7 +38,10 @@ public class AppleTreeMod {
 
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
+    private void commonSetup(final FMLCommonSetupEvent event)
+    {
+     //ModFlammablesから可燃性を参照
+        event.enqueueWork(ModFlammables::register);
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
