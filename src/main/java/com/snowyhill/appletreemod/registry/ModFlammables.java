@@ -19,5 +19,16 @@ public final class ModFlammables {
         fire.setFlammable(ModBlocks.APPLE_PRESSURE_PLATE.get(), 5, 20);
         fire.setFlammable(ModBlocks.APPLE_DOOR.get(), 5, 20);
         fire.setFlammable(ModBlocks.APPLE_TRAPDOOR.get(), 5, 20);
+
+        fire.setFlammable(ModBlocks.DARK_APPLE_PLANKS.get(), 5, 20);
+        fire.setFlammable(ModBlocks.DARK_APPLE_SLAB.get(), 5, 20);
+        fire.setFlammable(ModBlocks.DARK_APPLE_STAIRS.get(), 5, 20);
+        fire.setFlammable(ModBlocks.DARK_APPLE_FENCE.get(), 5, 20);
+        fire.setFlammable(ModBlocks.DARK_APPLE_FENCE_GATE.get(), 5, 20);
+        fire.setFlammable(ModBlocks.DARK_APPLE_BUTTON.get(), 5, 20);
+        fire.setFlammable(ModBlocks.DARK_APPLE_PRESSURE_PLATE.get(), 5, 20);
+        fire.setFlammable(ModBlocks.DARK_APPLE_DOOR.get(), 5, 20);
+        fire.setFlammable(ModBlocks.DARK_APPLE_TRAPDOOR.get(), 5, 20);
+
     }
 }

@@ -24,6 +24,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         //MODで作成したタグ
         this.copy(ModTags.Blocks.APPLE_LOG,
                 ModTags.Items.APPLE_LOG);
+        this.copy(ModTags.Blocks.DARK_APPLE_LOG,
+                ModTags.Items.DARK_APPLE_LOG);
         //バニラタグ
         this.copy(BlockTags.LOGS, ItemTags.LOGS);
         this.copy(BlockTags.LEAVES, ItemTags.LEAVES);

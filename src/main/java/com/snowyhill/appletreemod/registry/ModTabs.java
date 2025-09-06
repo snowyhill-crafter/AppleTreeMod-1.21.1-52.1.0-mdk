@@ -46,8 +46,29 @@ public class ModTabs {
                         pOutput.accept(ModItems.APPLE_BUTTON_ITEM.get());
                         pOutput.accept(ModItems.APPLE_PRESSURE_PLATE_ITEM.get());
 
-                        pOutput.accept(ModItems.APPLE_PIE_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_SAPLING_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_LOG_ITEM.get());
+                        pOutput.accept(ModItems.STRIPPED_DARK_APPLE_LOG_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_WOOD_ITEM.get());
+                        pOutput.accept(ModItems.STRIPPED_DARK_APPLE_WOOD_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_LEAVES_ITEM.get());
+                        pOutput.accept(ModItems.ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES_ITEM.get());
+                        pOutput.accept(ModItems.ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES_ITEM.get());
+                        pOutput.accept(ModItems.ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES_ITEM.get());
 
+                        pOutput.accept(ModItems.DARK_APPLE_PLANKS_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_SLAB_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_STAIRS_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_FENCE_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_FENCE_GATE_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_DOOR_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_TRAPDOOR_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_BUTTON_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_PRESSURE_PLATE_ITEM.get());
+
+                        pOutput.accept(ModItems.DARK_APPLE.get());
+                        pOutput.accept(ModItems.APPLE_PIE_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_PIE_ITEM.get());
 
 
 

@@ -13,7 +13,7 @@ public class ModTags {
 
         public static class Blocks {
             public static final TagKey<Block> APPLE_LOG = tag("apple_log");
-
+            public static final TagKey<Block> DARK_APPLE_LOG = tag("dark_apple_log");
             private static TagKey<Block> tag(String name) {
                 return BlockTags.create(
                         ResourceLocation.fromNamespaceAndPath(AppleTreeMod.MOD_ID, name)
@@ -23,7 +23,7 @@ public class ModTags {
 
         public static class Items {
             public static final TagKey<Item> APPLE_LOG = tag("apple_log");
-
+            public static final TagKey<Item> DARK_APPLE_LOG = tag("dark_apple_log");
             private static TagKey<Item> tag(String name) {
                 return ItemTags.create(
                         ResourceLocation.fromNamespaceAndPath(AppleTreeMod.MOD_ID, name)

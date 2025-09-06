@@ -23,7 +23,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.APPLE_LOG.get(),
                 ModBlocks.STRIPPED_APPLE_LOG.get(),
                 ModBlocks.APPLE_WOOD.get(),
-                ModBlocks.STRIPPED_APPLE_WOOD.get()
+                ModBlocks.STRIPPED_APPLE_WOOD.get(),
+
+                ModBlocks.DARK_APPLE_LOG.get(),
+                ModBlocks.STRIPPED_DARK_APPLE_LOG.get(),
+                ModBlocks.DARK_APPLE_WOOD.get(),
+                ModBlocks.STRIPPED_DARK_APPLE_WOOD.get()
         );
 
         this.tag(BlockTags.LEAVES)
@@ -32,7 +37,16 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                         ModBlocks.APPLE_FLOWER_LEAVES.get(),
                         ModBlocks.ORNAMENTAL_APPLE_FLOWER_LEAVES.get(),
                         ModBlocks.ORNAMENTAL_APPLE_UNRIPE_LEAVES.get(),
-                        ModBlocks.ORNAMENTAL_APPLE_FRUIT_LEAVES.get()
+                        ModBlocks.ORNAMENTAL_APPLE_FRUIT_LEAVES.get(),
+
+                        ModBlocks.DARK_APPLE_LEAVES.get(),
+                        ModBlocks.DARK_APPLE_FLOWER_LEAVES.get(),
+                        ModBlocks.ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES.get(),
+                        ModBlocks.ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES.get(),
+                        ModBlocks.ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES.get()
+
+
+
                 );
 
         this.tag(BlockTags.LOGS)
@@ -40,7 +54,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                         ModBlocks.APPLE_LOG.get(),
                         ModBlocks.STRIPPED_APPLE_LOG.get(),
                         ModBlocks.APPLE_WOOD.get(),
-                        ModBlocks.STRIPPED_APPLE_WOOD.get()
+                        ModBlocks.STRIPPED_APPLE_WOOD.get(),
+
+                        ModBlocks.DARK_APPLE_LOG.get(),
+                        ModBlocks.STRIPPED_DARK_APPLE_LOG.get(),
+                        ModBlocks.DARK_APPLE_WOOD.get(),
+                        ModBlocks.STRIPPED_DARK_APPLE_WOOD.get()
+
                 );
 
 
@@ -53,6 +73,16 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                         ModBlocks.STRIPPED_APPLE_WOOD.get()
                 );
 
+        this.tag(ModTags.Blocks.DARK_APPLE_LOG)
+                .add(
+                        ModBlocks.DARK_APPLE_LOG.get(),
+                        ModBlocks.STRIPPED_DARK_APPLE_LOG.get(),
+                        ModBlocks.DARK_APPLE_WOOD.get(),
+                        ModBlocks.STRIPPED_DARK_APPLE_WOOD.get()
+                );
+
+
+
         // ←採掘速度に効くのはこっち
         tag(BlockTags.MINEABLE_WITH_AXE).add(
                 ModBlocks.APPLE_SLAB.get(),
@@ -62,24 +92,71 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.APPLE_TRAPDOOR.get(),
                 ModBlocks.APPLE_STAIRS.get(),
                 ModBlocks.APPLE_BUTTON.get(),
-                ModBlocks.APPLE_PRESSURE_PLATE.get()
+                ModBlocks.APPLE_PRESSURE_PLATE.get(),
+
+                ModBlocks.DARK_APPLE_SLAB.get(),
+                ModBlocks.DARK_APPLE_STAIRS.get(),
+                ModBlocks.DARK_APPLE_FENCE.get(),
+                ModBlocks.DARK_APPLE_FENCE_GATE.get(),
+                ModBlocks.DARK_APPLE_DOOR.get(),
+                ModBlocks.DARK_APPLE_TRAPDOOR.get(),
+                ModBlocks.DARK_APPLE_BUTTON.get(),
+                ModBlocks.DARK_APPLE_PRESSURE_PLATE.get()
         );
-        this.tag(BlockTags.SAPLINGS).add(ModBlocks.APPLE_SAPLING.get());
 
-        this.tag(BlockTags.PLANKS).add(ModBlocks.APPLE_PLANKS.get());
-        this.tag(BlockTags.SLABS).add(ModBlocks.APPLE_SLAB.get());
-        this.tag(BlockTags.STAIRS).add(ModBlocks.APPLE_STAIRS.get());
-        this.tag(BlockTags.FENCES).add(ModBlocks.APPLE_FENCE.get());
-        this.tag(BlockTags.FENCE_GATES).add(ModBlocks.APPLE_FENCE_GATE.get());
-        this.tag(BlockTags.DOORS).add(ModBlocks.APPLE_DOOR.get());
-        this.tag(BlockTags.TRAPDOORS).add(ModBlocks.APPLE_TRAPDOOR.get());
-        this.tag(BlockTags.BUTTONS).add(ModBlocks.APPLE_BUTTON.get());
-        this.tag(BlockTags.PRESSURE_PLATES).add(ModBlocks.APPLE_PRESSURE_PLATE.get());
+        this.tag(BlockTags.SAPLINGS)
+                .add(
+                        ModBlocks.APPLE_SAPLING.get(),
+                        ModBlocks.DARK_APPLE_SAPLING.get()
+                );
+
+        this.tag(BlockTags.PLANKS).add(
+                ModBlocks.APPLE_PLANKS.get(),
+                ModBlocks.DARK_APPLE_PLANKS.get()
+        );
+
+        this.tag(BlockTags.SLABS).add(
+                ModBlocks.APPLE_SLAB.get(),
+                ModBlocks.DARK_APPLE_SLAB.get()
+        );
+
+        this.tag(BlockTags.STAIRS).add(
+                ModBlocks.APPLE_STAIRS.get(),
+                ModBlocks.DARK_APPLE_STAIRS.get()
+        );
+
+        this.tag(BlockTags.FENCES).add(
+                ModBlocks.APPLE_FENCE.get(),
+                ModBlocks.DARK_APPLE_FENCE.get()
+        );
+
+        this.tag(BlockTags.FENCE_GATES).add(
+                ModBlocks.APPLE_FENCE_GATE.get(),
+                ModBlocks.DARK_APPLE_FENCE_GATE.get()
+        );
+        this.tag(BlockTags.DOORS).add(
+                ModBlocks.APPLE_DOOR.get(),
+                ModBlocks.DARK_APPLE_DOOR.get()
+        );
+
+        this.tag(BlockTags.TRAPDOORS).add(
+                ModBlocks.APPLE_TRAPDOOR.get(),
+                ModBlocks.DARK_APPLE_TRAPDOOR.get()
+        );
+
+        this.tag(BlockTags.BUTTONS).add(
+                ModBlocks.APPLE_BUTTON.get(),
+                ModBlocks.DARK_APPLE_BUTTON.get()
+        );
+
+        this.tag(BlockTags.PRESSURE_PLATES).add(
+                ModBlocks.APPLE_PRESSURE_PLATE.get(),
+                ModBlocks.DARK_APPLE_PRESSURE_PLATE.get()
+        );
 
 
 
-
-            }
+    }
 
 
 

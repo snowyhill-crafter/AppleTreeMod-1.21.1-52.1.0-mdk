@@ -2,6 +2,7 @@ package com.snowyhill.appletreemod.datagen.client;
 
 import com.snowyhill.appletreemod.AppleTreeMod;
 import com.snowyhill.appletreemod.registry.ModBlocks;
+import com.snowyhill.appletreemod.registry.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -33,6 +34,25 @@ public class ModItemModelProvider extends ItemModelProvider {
                 ModBlocks.APPLE_PLANKS);
 
         sapling(ModBlocks.APPLE_SAPLING);
+        sapling(ModBlocks.DARK_APPLE_SAPLING);
+        itemWithBlock(ModBlocks.DARK_APPLE_SLAB);
+        itemWithBlock(ModBlocks.DARK_APPLE_STAIRS);
+        itemWithBlock(ModBlocks.DARK_APPLE_FENCE_GATE);
+        itemWithBlock(ModBlocks.DARK_APPLE_PRESSURE_PLATE);
+        basicItem(ModBlocks.DARK_APPLE_DOOR.get().asItem());
+        trapdoor(ModBlocks.DARK_APPLE_TRAPDOOR);
+        fence(ModBlocks.DARK_APPLE_FENCE,
+                ModBlocks.DARK_APPLE_PLANKS);
+        button(ModBlocks.DARK_APPLE_BUTTON,
+                ModBlocks.DARK_APPLE_PLANKS);
+
+
+
+        basicItem(ModItems.DARK_APPLE.get());
+
+
+
+
     }
 
     public void itemWithBlock(RegistryObject<Block> block) {

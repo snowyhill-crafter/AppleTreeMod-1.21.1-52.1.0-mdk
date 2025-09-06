@@ -1,6 +1,7 @@
 package com.snowyhill.appletreemod.registry;
 
 import com.snowyhill.appletreemod.AppleTreeMod;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -116,10 +117,129 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.APPLE_PRESSURE_PLATE.get(), new Item.Properties())
     );
 
+
+
+    public static final RegistryObject<Item> DARK_APPLE_SAPLING_ITEM = ITEMS.register(
+            "dark_apple_sapling",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_SAPLING.get(), new Item.Properties())
+    );
+
+
+    public static final RegistryObject<Item> DARK_APPLE_LOG_ITEM = ITEMS.register(
+            "dark_apple_log",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_LOG.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> STRIPPED_DARK_APPLE_LOG_ITEM = ITEMS.register(
+            "stripped_dark_apple_log",
+            () -> new BlockItem(ModBlocks.STRIPPED_DARK_APPLE_LOG.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DARK_APPLE_WOOD_ITEM = ITEMS.register(
+            "dark_apple_wood",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_WOOD.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> STRIPPED_DARK_APPLE_WOOD_ITEM = ITEMS.register(
+            "stripped_dark_apple_wood",
+            () -> new BlockItem(ModBlocks.STRIPPED_DARK_APPLE_WOOD.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DARK_APPLE_PLANKS_ITEM = ITEMS.register(
+            "dark_apple_planks",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_PLANKS.get(), new Item.Properties())
+    );
+    public static final RegistryObject<Item> DARK_APPLE_SLAB_ITEM = ITEMS.register(
+            "dark_apple_slab",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_SLAB.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DARK_APPLE_STAIRS_ITEM = ITEMS.register(
+            "dark_apple_stairs",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_STAIRS.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DARK_APPLE_FENCE_ITEM = ITEMS.register(
+            "dark_apple_fence",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_FENCE.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DARK_APPLE_FENCE_GATE_ITEM = ITEMS.register(
+            "dark_apple_fence_gate",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_FENCE_GATE.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DARK_APPLE_DOOR_ITEM = ITEMS.register(
+            "dark_apple_door",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_DOOR.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DARK_APPLE_TRAPDOOR_ITEM = ITEMS.register(
+            "dark_apple_trapdoor",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_TRAPDOOR.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DARK_APPLE_BUTTON_ITEM = ITEMS.register(
+            "dark_apple_button",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_BUTTON.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DARK_APPLE_PRESSURE_PLATE_ITEM = ITEMS.register(
+            "dark_apple_pressure_plate",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_PRESSURE_PLATE.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DARK_APPLE_LEAVES_ITEM = ITEMS.register(
+            "dark_apple_leaves",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_LEAVES.get(), new Item.Properties())
+    );
+    public static final RegistryObject<Item> DARK_APPLE_FLOWER_LEAVES_ITEM = ITEMS.register(
+            "dark_apple_flower_leaves",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_FLOWER_LEAVES.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES_ITEM = ITEMS.register(
+            "ornamental_dark_apple_flower_leaves",
+            () -> new BlockItem(ModBlocks.ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES_ITEM = ITEMS.register(
+            "ornamental_dark_apple_unripe_leaves",
+            () -> new BlockItem(ModBlocks.ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES_ITEM = ITEMS.register(
+            "ornamental_dark_apple_fruit_leaves",
+            () -> new BlockItem(ModBlocks.ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES.get(), new Item.Properties())
+    );
+
+
+
+    public static final FoodProperties DARK_APPLE_FOOD = new FoodProperties.Builder()
+            .nutrition(4)              // 回復量
+            .saturationModifier(0.6f)  // 満腹度
+            .alwaysEdible()                  // お腹いっぱいでも食べられる
+            .build();
+
+    public static final RegistryObject<Item> DARK_APPLE = ITEMS.register("dark_apple",
+            () -> new com.snowyhill.appletreemod.item.DarkAppleItem(
+                    new Item.Properties()
+                            .food(DARK_APPLE_FOOD)
+            )
+    );
+
+
+
+
+
+
     public static final RegistryObject<Item> APPLE_PIE_ITEM = ITEMS.register("apple_pie",
             () -> new BlockItem(ModBlocks.APPLE_PIE.get(), new Item.Properties()));
 
-
+    public static final RegistryObject<Item> DARK_APPLE_PIE_ITEM = ITEMS.register("dark_apple_pie",
+            () -> new BlockItem(ModBlocks.DARK_APPLE_PIE.get(), new Item.Properties()
+                    .stacksTo(1)
+            ));
 
     // レジストリをイベントバスに登録
     public static void register(IEventBus eventBus) {

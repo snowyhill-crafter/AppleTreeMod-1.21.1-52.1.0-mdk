@@ -2,6 +2,7 @@ package com.snowyhill.appletreemod.datagen.server;
 
 import com.snowyhill.appletreemod.AppleTreeMod;
 import com.snowyhill.appletreemod.registry.ModBlocks;
+import com.snowyhill.appletreemod.registry.ModItems;
 import com.snowyhill.appletreemod.tag.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -77,8 +78,68 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('W', Items.WHEAT) // ← wheat はタグではなくアイテムでOK
                 .unlockedBy("has_apple", has(Items.APPLE))
                 .save(pRecipeOutput);
-        
-        
+
+        //dark_apple
+        woodFromLogs(pRecipeOutput, ModBlocks.DARK_APPLE_WOOD.get(),
+                ModBlocks.DARK_APPLE_LOG.get());
+
+        woodFromLogs(pRecipeOutput, ModBlocks.STRIPPED_DARK_APPLE_WOOD.get(),
+                ModBlocks.STRIPPED_DARK_APPLE_LOG.get());
+
+        planksFromLog(pRecipeOutput,
+                ModBlocks.DARK_APPLE_PLANKS.get(),
+
+                ModTags.Items.DARK_APPLE_LOG,4);
+
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ModBlocks.DARK_APPLE_SLAB.get(),
+                ModBlocks.DARK_APPLE_PLANKS.get());
+
+        stairs(pRecipeOutput,
+                ModBlocks.DARK_APPLE_STAIRS.get(),
+                ModBlocks.DARK_APPLE_PLANKS.get());
+
+        fence(pRecipeOutput,
+                ModBlocks.DARK_APPLE_FENCE.get(),
+                ModBlocks.DARK_APPLE_PLANKS.get());
+
+        fenceGate(pRecipeOutput,
+                ModBlocks.DARK_APPLE_FENCE_GATE.get(),
+                ModBlocks.DARK_APPLE_PLANKS.get());
+
+        door(pRecipeOutput,
+                ModBlocks.DARK_APPLE_DOOR.get(),
+                ModBlocks.DARK_APPLE_PLANKS.get());
+
+        trapdoor(pRecipeOutput,
+                ModBlocks.DARK_APPLE_TRAPDOOR.get(),
+                ModBlocks.DARK_APPLE_PLANKS.get());
+
+        button(pRecipeOutput,
+                ModBlocks.DARK_APPLE_BUTTON.get(),
+                ModBlocks.DARK_APPLE_PLANKS.get());
+
+        pressurePlate(pRecipeOutput,
+                ModBlocks.DARK_APPLE_PRESSURE_PLATE.get(),
+                ModBlocks.DARK_APPLE_PLANKS.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModBlocks.DARK_APPLE_PIE.get()) // BlockでもOK（ItemLike）
+                .pattern("AAA")
+                .pattern("SES")
+                .pattern("WWW")
+                .define('A', ModItems.DARK_APPLE.get())
+                .define('S', Items.SUGAR)
+                .define('E', Items.EGG)
+                .define('W', Items.WHEAT) // ← wheat はタグではなくアイテムでOK
+                .unlockedBy("has_apple", has(ModItems.DARK_APPLE.get()))
+                .save(pRecipeOutput);
+
+
+
+
+
+
+
     }
 
     protected static void oreSmelting(

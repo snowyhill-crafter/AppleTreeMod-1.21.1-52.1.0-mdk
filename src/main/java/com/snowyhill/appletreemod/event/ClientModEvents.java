@@ -16,7 +16,7 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void onBlockColors(RegisterColorHandlersEvent.Block event) {
-        // リンゴの葉の色を固定（青みのある緑）
+
 
         // バイオームのfoliage.png（バニラ仕様）を参照する
         event.register(
@@ -39,15 +39,23 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void onItemColors(RegisterColorHandlersEvent.Item event) {
-        // アイテムでもリンゴの葉の色を固定（青みのある緑）
-        // バニラ葉と同じく、getDefaultColor() を使う（テクスチャが青みがかっていれば、同じ見た目になる）
+
         event.register(
                 (stack, tintIndex) -> FoliageColor.getDefaultColor(),
                 ModBlocks.APPLE_LEAVES.get(),
                 ModBlocks.APPLE_FLOWER_LEAVES.get(),
                 ModBlocks.ORNAMENTAL_APPLE_FLOWER_LEAVES.get(),
                 ModBlocks.ORNAMENTAL_APPLE_UNRIPE_LEAVES.get(),
-                ModBlocks.ORNAMENTAL_APPLE_FRUIT_LEAVES.get()
+                ModBlocks.ORNAMENTAL_APPLE_FRUIT_LEAVES.get(),
+
+                ModBlocks.DARK_APPLE_LEAVES.get(),
+                ModBlocks.DARK_APPLE_FLOWER_LEAVES.get(),
+                ModBlocks.ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES.get(),
+                ModBlocks.ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES.get(),
+                ModBlocks.ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES.get()
+
+
+
         );
 
 

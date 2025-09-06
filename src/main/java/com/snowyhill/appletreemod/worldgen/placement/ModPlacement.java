@@ -21,6 +21,9 @@ public class ModPlacement {
     public static final ResourceKey<PlacedFeature> APPLE_TREE =
             createKey("apple_tree");
 
+    public static final ResourceKey<PlacedFeature> DARK_APPLE_TREE =
+            createKey("dark_apple_tree");
+
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures =
@@ -34,6 +37,14 @@ public class ModPlacement {
                         PlacementUtils.countExtra(0, 0.2f, 1),
                         //1チャンク当たりの本数、追加の確率、追加されるときの本数
                         ModBlocks.APPLE_SAPLING.get()));
+
+        PlacementUtils.register(context, DARK_APPLE_TREE,
+                configuredFeatures.getOrThrow(ModFeatures.DARK_APPLE_TREE_KEY),
+                VegetationPlacements.treePlacement(
+                        PlacementUtils.countExtra(0, 0.5f, 1),
+                        //1チャンク当たりの本数、追加の確率、追加されるときの本数
+                        ModBlocks.DARK_APPLE_SAPLING.get()));
+
 
 
     }

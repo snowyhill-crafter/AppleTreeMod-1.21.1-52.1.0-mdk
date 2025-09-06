@@ -27,10 +27,34 @@ public class ModBlocks {
             () -> new SaplingBlock(ModTreeGrowers.APPLE_TREE,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
-    public static final RegistryObject<Block> POTTED_APPLE_SAPLING = BLOCKS.register("potted_apple_sapling",
+    public static final RegistryObject<Block> POTTED_APPLE_SAPLING = BLOCKS.register(
+            "potted_apple_sapling",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT,
                     ModBlocks.APPLE_SAPLING,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING)));
+
+
+    public static final RegistryObject<Block> DARK_APPLE_SAPLING = BLOCKS.register(
+            "dark_apple_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.DARK_APPLE_TREE,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> POTTED_DARK_APPLE_SAPLING = BLOCKS.register(
+            "potted_dark_apple_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT,
+                    ModBlocks.DARK_APPLE_SAPLING,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING)));
+
+
+
+
+
+
+
+
+
+
+
 
     public static final RegistryObject<Block> APPLE_LOG = BLOCKS.register("apple_log",
             () -> new ModStrippableLogBlock(
@@ -116,9 +140,100 @@ public class ModBlocks {
             () -> new PressurePlateBlock(BlockSetType.OAK,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
 
+
+    public static final RegistryObject<Block> DARK_APPLE_LOG = BLOCKS.register("dark_apple_log",
+            () -> new ModStrippableLogBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG),
+                    () -> ModBlocks.STRIPPED_DARK_APPLE_LOG.get()
+            )
+    );
+    // 樹皮はがし後（stripped）原木
+    public static final RegistryObject<Block> STRIPPED_DARK_APPLE_LOG = BLOCKS.register("stripped_dark_apple_log",
+            () -> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_DARK_OAK_LOG))
+    );
+    public static final RegistryObject<Block> DARK_APPLE_WOOD = BLOCKS.register("dark_apple_wood",
+            () -> new ModStrippableLogBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD),
+                    () -> ModBlocks.STRIPPED_DARK_APPLE_WOOD.get()
+            )
+    );
+    public static final RegistryObject<Block> STRIPPED_DARK_APPLE_WOOD = BLOCKS.register("stripped_dark_apple_wood",
+            () -> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD))
+    );
+
+
+
+    public static final RegistryObject<Block> DARK_APPLE_LEAVES = BLOCKS.register(
+            "dark_apple_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
+
+
+    public static final RegistryObject<Block> DARK_APPLE_FLOWER_LEAVES = BLOCKS.register(
+            "dark_apple_flower_leaves",
+            () -> new DarkAppleFlowerLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
+
+
+    public static final RegistryObject<Block> ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES = BLOCKS.register(
+            "ornamental_dark_apple_flower_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
+
+
+    public static final RegistryObject<Block> ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES = BLOCKS.register(
+            "ornamental_dark_apple_unripe_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
+
+    public static final RegistryObject<Block> ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES = BLOCKS.register(
+            "ornamental_dark_apple_fruit_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).randomTicks()));
+
+
+
+    public static final RegistryObject<Block> DARK_APPLE_PLANKS = BLOCKS.register(
+            "dark_apple_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    // ハーフブロック
+    public static final RegistryObject<Block> DARK_APPLE_SLAB = BLOCKS.register(
+            "dark_apple_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    // 階段
+    public static final RegistryObject<Block> DARK_APPLE_STAIRS = BLOCKS.register(
+            "dark_apple_stairs",
+            () -> new StairBlock(ModBlocks.DARK_APPLE_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    // フェンス
+    public static final RegistryObject<Block> DARK_APPLE_FENCE = BLOCKS.register(
+            "dark_apple_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    // フェンスゲート
+    public static final RegistryObject<Block> DARK_APPLE_FENCE_GATE = BLOCKS.register(
+            "dark_apple_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    // ドア
+    public static final RegistryObject<Block> DARK_APPLE_DOOR = BLOCKS.register(
+            "dark_apple_door",
+            () -> new DoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    // トラップドア
+    public static final RegistryObject<Block> DARK_APPLE_TRAPDOOR = BLOCKS.register(
+            "dark_apple_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()
+            ));
+    // ボタン
+    public static final RegistryObject<Block> DARK_APPLE_BUTTON = BLOCKS.register(
+            "dark_apple_button",
+            () -> new ButtonBlock(BlockSetType.OAK, 30, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+            ));
+    // 感圧板
+    public static final RegistryObject<Block> DARK_APPLE_PRESSURE_PLATE = BLOCKS.register(
+            "dark_apple_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+
+
+
     public static final RegistryObject<Block> APPLE_PIE = BLOCKS.register("apple_pie",
             () -> new ApplePieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE).noOcclusion()));
-
+    public static final RegistryObject<Block> DARK_APPLE_PIE = BLOCKS.register("dark_apple_pie",
+            () -> new DarkApplePieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE).noOcclusion()));
 
     // ブロック＆アイテムを作成
   //  private static <T extends Block> RegistryObject<T> registerBlockWithItem(String name, Supplier<T> supplier) {
