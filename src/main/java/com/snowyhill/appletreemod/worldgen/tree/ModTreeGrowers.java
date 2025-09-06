@@ -12,4 +12,11 @@ public class ModTreeGrowers {
             Optional.of(ModFeatures.APPLE_TREE_KEY),
             Optional.empty());
 
+    public static final TreeGrower DARK_APPLE_TREE = new TreeGrower(
+            "dark_apple_tree", Optional.empty(),
+            Optional.of(ModFeatures.DARK_APPLE_TREE_KEY),
+            Optional.empty());
+
+
+
 }

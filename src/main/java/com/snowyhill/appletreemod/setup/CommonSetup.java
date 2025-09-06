@@ -15,6 +15,7 @@ public class CommonSetup {
         event.enqueueWork(() -> {
             FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
             pot.addPlant(ModBlocks.APPLE_SAPLING.getId(), ModBlocks.POTTED_APPLE_SAPLING);
+            pot.addPlant(ModBlocks.DARK_APPLE_SAPLING.getId(), ModBlocks.POTTED_DARK_APPLE_SAPLING);
         });
     }
 }

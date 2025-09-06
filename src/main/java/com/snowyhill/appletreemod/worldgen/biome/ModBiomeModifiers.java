@@ -26,6 +26,8 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_APPLE_TREE =
             createKey("add_apple_tree");
 
+    public static final ResourceKey<BiomeModifier> ADD_DARK_APPLE_TREE =
+            createKey("add_dark_apple_tree");
 
     //バイオームに鉱石生成するメソッド
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
@@ -34,19 +36,27 @@ public class ModBiomeModifiers {
 
         // 🌳 リンゴの木 - 条件付きバイオーム追加
         // biome tagのキー（"data/appletreemod/tags/worldgen/biome/apple_tree_spawnable.json" に対応）
-        TagKey<Biome> appleTreeBiomeTag = TagKey.create(Registries.BIOME,
+        TagKey<Biome> AppleTreeBiomeTag = TagKey.create(Registries.BIOME,
                 ResourceLocation.fromNamespaceAndPath("appletreemod", "apple_tree_spawnable"));
 
         context.register(ADD_APPLE_TREE,
                 new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                        biomes.getOrThrow(appleTreeBiomeTag), // ✅ biomeタグとして扱う
+                        biomes.getOrThrow(AppleTreeBiomeTag), // ✅ biomeタグとして扱う
                         HolderSet.direct(placedFeatures.getOrThrow(ModPlacement.APPLE_TREE)),
                         GenerationStep.Decoration.VEGETAL_DECORATION
                 )
         );
 
+        TagKey<Biome> DarkAppleTreeBiomeTag = TagKey.create(Registries.BIOME,
+                ResourceLocation.fromNamespaceAndPath("appletreemod", "dark_apple_tree_spawnable"));
 
-
+        context.register(ADD_DARK_APPLE_TREE,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        biomes.getOrThrow(DarkAppleTreeBiomeTag), // ✅ biomeタグとして扱う
+                        HolderSet.direct(placedFeatures.getOrThrow(ModPlacement.DARK_APPLE_TREE)),
+                        GenerationStep.Decoration.VEGETAL_DECORATION
+                )
+        );
 
     }
 

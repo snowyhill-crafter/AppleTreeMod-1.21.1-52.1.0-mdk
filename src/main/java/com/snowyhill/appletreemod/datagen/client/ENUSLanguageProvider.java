@@ -39,6 +39,31 @@ public class ENUSLanguageProvider extends LanguageProvider {
 
         addBlock(ModBlocks.APPLE_PIE, "Apple Pie");
 
+        addBlock(ModBlocks.DARK_APPLE_SAPLING, "Dark Apple Sapling");
+        addBlock(ModBlocks.POTTED_DARK_APPLE_SAPLING, "Potted Dark Apple Sapling");
+        addBlock(ModBlocks.DARK_APPLE_LOG, "Dark Apple Log");
+        addBlock(ModBlocks.STRIPPED_DARK_APPLE_LOG, "Stripped Dark Apple Log");
+        addBlock(ModBlocks.DARK_APPLE_WOOD, "Dark Apple Wood");
+        addBlock(ModBlocks.STRIPPED_DARK_APPLE_WOOD, "Stripped Dark Apple Wood");
+        addBlock(ModBlocks.DARK_APPLE_LEAVES, "Dark Apple Leaves");
+        addBlock(ModBlocks.DARK_APPLE_FLOWER_LEAVES, "flowering apple leaves");
+        addBlock(ModBlocks.ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES, "Ornamental flowering apple leaves");
+        addBlock(ModBlocks.ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES, "Ornamental unripe apple leaves");
+        addBlock(ModBlocks.ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES, "Ornamental ripe apple leaves");
+
+        addBlock(ModBlocks.DARK_APPLE_PLANKS, "Dark Apple Planks");
+        addBlock(ModBlocks.DARK_APPLE_SLAB, "Dark Apple Slab");
+        addBlock(ModBlocks.DARK_APPLE_STAIRS, "Dark Apple Stairs");
+        addBlock(ModBlocks.DARK_APPLE_FENCE, "Dark Apple Fence");
+        addBlock(ModBlocks.DARK_APPLE_FENCE_GATE, "Dark Apple Fence Gate");
+        addBlock(ModBlocks.DARK_APPLE_DOOR, "Dark Apple Door");
+        addBlock(ModBlocks.DARK_APPLE_TRAPDOOR, "Dark Apple Trapdoor");
+        addBlock(ModBlocks.DARK_APPLE_BUTTON, "Dark Apple Button");
+        addBlock(ModBlocks.DARK_APPLE_PRESSURE_PLATE, "Dark Apple Pressure Plate");
+        addItem(ModItems.DARK_APPLE, "Dark Apple");
+        addBlock(ModBlocks.DARK_APPLE_PIE, "Dark Apple Pie");
+
+
         add("creativetabs.Mod_tab", "appletreemod");
 
 

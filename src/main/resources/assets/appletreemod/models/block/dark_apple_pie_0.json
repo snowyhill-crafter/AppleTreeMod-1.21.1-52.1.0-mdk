@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "appletreemod:block/dark_apple_pie_top",
+    "top":    "appletreemod:block/dark_apple_pie_top",
+    "bottom": "appletreemod:block/dark_apple_pie_bottom",
+    "side":   "appletreemod:block/dark_apple_pie_side"
+
+  },
+  "elements": [
+    { "from":[1,0,1],  "to":[15,8,15],
+      "faces":{
+        "up":{"texture":"#top"},
+        "down":{"texture":"#bottom"},
+        "north":{"texture":"#side"},
+        "south":{"texture":"#side"},
+        "west":{"texture":"#side"},
+        "east":{"texture":"#side"}
+      }
+    }
+  ]
+}

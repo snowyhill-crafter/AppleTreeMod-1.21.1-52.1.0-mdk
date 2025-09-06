@@ -5,6 +5,7 @@ import com.snowyhill.appletreemod.registry.ModBlocks;
 import com.snowyhill.appletreemod.registry.ModFlammables;
 import com.snowyhill.appletreemod.registry.ModItems;
 import com.snowyhill.appletreemod.registry.ModTabs;
+import com.snowyhill.appletreemod.worldgen.features.decolator.ModTreeDecorators;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -35,7 +36,7 @@ public class AppleTreeMod {
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
-
+        ModTreeDecorators.DECORATORS.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
