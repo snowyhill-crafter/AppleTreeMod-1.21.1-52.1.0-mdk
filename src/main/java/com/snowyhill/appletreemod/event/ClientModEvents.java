@@ -32,7 +32,13 @@ public class ClientModEvents {
                 ModBlocks.APPLE_FLOWER_LEAVES.get(),
                 ModBlocks.ORNAMENTAL_APPLE_FLOWER_LEAVES.get(),
                 ModBlocks.ORNAMENTAL_APPLE_UNRIPE_LEAVES.get(),
-                ModBlocks.ORNAMENTAL_APPLE_FRUIT_LEAVES.get()
+                ModBlocks.ORNAMENTAL_APPLE_FRUIT_LEAVES.get(),
+
+                ModBlocks.DARK_APPLE_LEAVES.get(),
+                ModBlocks.DARK_APPLE_FLOWER_LEAVES.get(),
+                ModBlocks.ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES.get(),
+                ModBlocks.ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES.get(),
+                ModBlocks.ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES.get()
         );
 
     }

@@ -19,7 +19,7 @@ public class ModTabs {
     public static final RegistryObject<CreativeModeTab> APPLETREEMOD_TAB =
             TABS.register("appletreemod_tab", () -> CreativeModeTab.builder()
                     // タブのタイトルを設定
-                    .title(Component.translatable("creativetabs.appletreemod_tab"))
+                    .title(Component.translatable("creativetabs.Mod_tab"))
                     // タブのアイコンを設定
                     .icon(ModItems.APPLE_SAPLING_ITEM.get()::getDefaultInstance)
                     // タブにアイテムを追加（必須）

@@ -62,26 +62,25 @@ public class ModFeatures {
         );
 
 
-
         FeatureUtils.register(context, DARK_APPLE_TREE_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
                         // 幹・葉はダークアップルのブロックを使用
                         BlockStateProvider.simple(ModBlocks.DARK_APPLE_LOG.get()),
                         // 大型オークと同タイプの幹
                         new FancyTrunkPlacer(
-                                3,   // base height（大きなオーク相当）
-                                11,  // heightRandA
-                                0    // heightRandB
+                                7,   // base height（大きなオーク相当）
+                                3,  // heightRandA
+                                1    // heightRandB
                         ),
                         BlockStateProvider.simple(ModBlocks.DARK_APPLE_LEAVES.get()),
                         // 大型オークと同タイプの葉
                         new FancyFoliagePlacer(
                                 ConstantInt.of(2),  // foliageRadius
-                                ConstantInt.of(4),  // offset
-                                4                   // height
+                                ConstantInt.of(3),  // offset
+                                3                   // height
                         ),
                         // Fancy Oak 相当の層サイズ
-                        new TwoLayersFeatureSize(0, 0, 0))
+                        new TwoLayersFeatureSize(1, 0, 1))
                         // ★ TreeDecorator の “インスタンス” を渡す
                         .decorators(List.of(
                                 new DarkAppleOuterFlowersDecorator(2)
