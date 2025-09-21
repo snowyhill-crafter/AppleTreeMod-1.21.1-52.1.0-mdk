@@ -234,11 +234,14 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> APPLE_PIE_ITEM = ITEMS.register("apple_pie",
-            () -> new BlockItem(ModBlocks.APPLE_PIE.get(), new Item.Properties()));
+            () -> new BlockItem(ModBlocks.APPLE_PIE.get(), new Item.Properties()
+                    .stacksTo(1)
+            ));
 
     public static final RegistryObject<Item> DARK_APPLE_PIE_ITEM = ITEMS.register("dark_apple_pie",
             () -> new BlockItem(ModBlocks.DARK_APPLE_PIE.get(), new Item.Properties()
                     .stacksTo(1)
+
             ));
 
     // レジストリをイベントバスに登録

@@ -54,11 +54,11 @@ public class AppleFlowerLeavesBlock extends LeavesBlock implements BonemealableB
                 .setValue(WATERLOGGED, Boolean.valueOf(false)) // WATERLOGGEDもデフォルト状態に含める
         );
     }
-
-    @Override
-    public ItemStack getCloneItemStack(LevelReader pLevel, BlockPos pPos, BlockState pState) {
-        return new ItemStack(Items.APPLE);
-    }
+//    クリエイティブモードのピック（中ボタン押し込み）の処理を描いているが、指定しなければブロックを返すので別に要らない。
+//    @Override
+//    public ItemStack getCloneItemStack(LevelReader pLevel, BlockPos pPos, BlockState pState) {
+//        return new ItemStack(Items.APPLE);
+//    }
 
     @Override
     protected VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
