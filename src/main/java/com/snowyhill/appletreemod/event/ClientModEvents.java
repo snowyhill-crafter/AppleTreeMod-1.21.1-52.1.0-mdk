@@ -50,13 +50,13 @@ public class ClientModEvents {
         event.register(
                 (stack, tintIndex) -> FoliageColor.getDefaultColor(),
                 ModItems.APPLE_LEAVES_ITEM.get(),
-                // APPLE_FLOWER_LEAVES_ITEM は作っていないので渡さない
+                ModItems.APPLE_FLOWER_LEAVES_ITEM.get(),
                 ModItems.ORNAMENTAL_APPLE_FLOWER_LEAVES_ITEM.get(),
                 ModItems.ORNAMENTAL_APPLE_UNRIPE_LEAVES_ITEM.get(),
                 ModItems.ORNAMENTAL_APPLE_FRUIT_LEAVES_ITEM.get(),
 
                 ModItems.DARK_APPLE_LEAVES_ITEM.get(),
-                // DARK_APPLE_FLOWER_LEAVES_ITEM は渡さない
+                ModItems.DARK_APPLE_FLOWER_LEAVES_ITEM.get(),
                 ModItems.ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES_ITEM.get(),
                 ModItems.ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES_ITEM.get(),
                 ModItems.ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES_ITEM.get()
