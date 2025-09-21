@@ -33,14 +33,14 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 // BlockではなくLeavesBlockを継承する
 public class DarkAppleFlowerLeavesBlock extends LeavesBlock implements BonemealableBlock {
-    public static final MapCodec<AppleFlowerLeavesBlock> CODEC = simpleCodec(AppleFlowerLeavesBlock::new);
+    public static final MapCodec<DarkAppleFlowerLeavesBlock> CODEC = simpleCodec(DarkAppleFlowerLeavesBlock::new);
     public static final int MAX_AGE = 2;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
 
     private static final VoxelShape LEAVES_SHAPE = Shapes.block();
 
     @Override
-    public MapCodec<AppleFlowerLeavesBlock> codec() {
+    public MapCodec<DarkAppleFlowerLeavesBlock> codec() {
         return CODEC;
     }
 
