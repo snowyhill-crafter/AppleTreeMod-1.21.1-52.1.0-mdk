@@ -3,6 +3,7 @@ package com.snowyhill.appletreemod.event;
 
 import com.snowyhill.appletreemod.AppleTreeMod;
 import com.snowyhill.appletreemod.registry.ModBlocks;
+import com.snowyhill.appletreemod.registry.ModItems;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraftforge.api.distmarker.Dist;
@@ -48,18 +49,17 @@ public class ClientModEvents {
 
         event.register(
                 (stack, tintIndex) -> FoliageColor.getDefaultColor(),
-                ModBlocks.APPLE_LEAVES.get(),
-                ModBlocks.APPLE_FLOWER_LEAVES.get(),
-                ModBlocks.ORNAMENTAL_APPLE_FLOWER_LEAVES.get(),
-                ModBlocks.ORNAMENTAL_APPLE_UNRIPE_LEAVES.get(),
-                ModBlocks.ORNAMENTAL_APPLE_FRUIT_LEAVES.get(),
+                ModItems.APPLE_LEAVES_ITEM.get(),
+                // APPLE_FLOWER_LEAVES_ITEM は作っていないので渡さない
+                ModItems.ORNAMENTAL_APPLE_FLOWER_LEAVES_ITEM.get(),
+                ModItems.ORNAMENTAL_APPLE_UNRIPE_LEAVES_ITEM.get(),
+                ModItems.ORNAMENTAL_APPLE_FRUIT_LEAVES_ITEM.get(),
 
-                ModBlocks.DARK_APPLE_LEAVES.get(),
-                ModBlocks.DARK_APPLE_FLOWER_LEAVES.get(),
-                ModBlocks.ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES.get(),
-                ModBlocks.ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES.get(),
-                ModBlocks.ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES.get()
-
+                ModItems.DARK_APPLE_LEAVES_ITEM.get(),
+                // DARK_APPLE_FLOWER_LEAVES_ITEM は渡さない
+                ModItems.ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES_ITEM.get(),
+                ModItems.ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES_ITEM.get(),
+                ModItems.ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES_ITEM.get()
 
 
         );
