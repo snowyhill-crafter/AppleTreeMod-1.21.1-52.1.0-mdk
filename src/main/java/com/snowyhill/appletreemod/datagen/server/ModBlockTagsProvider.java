@@ -84,7 +84,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
 
         // ←採掘速度に効くのはこっち
-        tag(BlockTags.MINEABLE_WITH_AXE).add(
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(
                 ModBlocks.APPLE_SLAB.get(),
                 ModBlocks.APPLE_FENCE.get(),
                 ModBlocks.APPLE_FENCE_GATE.get(),
