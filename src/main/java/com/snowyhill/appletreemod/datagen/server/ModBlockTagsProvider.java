@@ -93,6 +93,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.APPLE_STAIRS.get(),
                 ModBlocks.APPLE_BUTTON.get(),
                 ModBlocks.APPLE_PRESSURE_PLATE.get(),
+                ModBlocks.APPLE_SIGN.get(),
+                ModBlocks.APPLE_WALL_SIGN.get(),
+                ModBlocks.APPLE_HANGING_SIGN.get(),
+                ModBlocks.APPLE_WALL_HANGING_SIGN.get(),
 
                 ModBlocks.DARK_APPLE_SLAB.get(),
                 ModBlocks.DARK_APPLE_STAIRS.get(),
@@ -101,7 +105,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.DARK_APPLE_DOOR.get(),
                 ModBlocks.DARK_APPLE_TRAPDOOR.get(),
                 ModBlocks.DARK_APPLE_BUTTON.get(),
-                ModBlocks.DARK_APPLE_PRESSURE_PLATE.get()
+                ModBlocks.DARK_APPLE_PRESSURE_PLATE.get(),
+                ModBlocks.DARK_APPLE_SIGN.get(),
+                ModBlocks.DARK_APPLE_WALL_SIGN.get(),
+                ModBlocks.DARK_APPLE_HANGING_SIGN.get(),
+                ModBlocks.DARK_APPLE_WALL_HANGING_SIGN.get()
         );
 
         this.tag(BlockTags.SAPLINGS)

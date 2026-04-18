@@ -1,0 +1,28 @@
+{
+  "values": [
+    "appletreemod:apple_slab",
+    "appletreemod:apple_fence",
+    "appletreemod:apple_fence_gate",
+    "appletreemod:apple_door",
+    "appletreemod:apple_trapdoor",
+    "appletreemod:apple_stairs",
+    "appletreemod:apple_button",
+    "appletreemod:apple_pressure_plate",
+    "appletreemod:apple_sign",
+    "appletreemod:apple_wall_sign",
+    "appletreemod:apple_hanging_sign",
+    "appletreemod:apple_wall_hanging_sign",
+    "appletreemod:dark_apple_slab",
+    "appletreemod:dark_apple_stairs",
+    "appletreemod:dark_apple_fence",
+    "appletreemod:dark_apple_fence_gate",
+    "appletreemod:dark_apple_door",
+    "appletreemod:dark_apple_trapdoor",
+    "appletreemod:dark_apple_button",
+    "appletreemod:dark_apple_pressure_plate",
+    "appletreemod:dark_apple_sign",
+    "appletreemod:dark_apple_wall_sign",
+    "appletreemod:dark_apple_hanging_sign",
+    "appletreemod:dark_apple_wall_hanging_sign"
+  ]
+}

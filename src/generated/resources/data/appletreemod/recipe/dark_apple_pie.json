@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "appletreemod:dark_apple"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "SES",
+    "WWW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "appletreemod:dark_apple_pie"
+  }
+}

@@ -36,6 +36,10 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.APPLE_TRAPDOOR, "リンゴのトラップドア");
         addBlock(ModBlocks.APPLE_BUTTON, "リンゴのボタン");
         addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "リンゴの感圧板");
+        addBlock(ModBlocks.APPLE_SIGN, "リンゴの看板");
+        addBlock(ModBlocks.APPLE_HANGING_SIGN, "リンゴの吊り看板");
+        addItem(ModItems.APPLE_BOAT, "リンゴのボート");
+        addItem(ModItems.APPLE_CHEST_BOAT, "チェスト付きのリンゴのボート");
 
         addBlock(ModBlocks.APPLE_PIE, "アップルパイ");
 
@@ -60,6 +64,12 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.DARK_APPLE_TRAPDOOR, "ダークアップルのトラップドア");
         addBlock(ModBlocks.DARK_APPLE_BUTTON, "ダークアップルのボタン");
         addBlock(ModBlocks.DARK_APPLE_PRESSURE_PLATE, "ダークアップルの感圧板");
+        addBlock(ModBlocks.DARK_APPLE_SIGN, "ダークアップルの看板");
+        addBlock(ModBlocks.DARK_APPLE_HANGING_SIGN, "ダークアップルの吊り看板");
+        addItem(ModItems.DARK_APPLE_BOAT, "ダークアップルのボート");
+        addItem(ModItems.DARK_APPLE_CHEST_BOAT, "チェスト付きのダークアップルのボート");
+
+
         addItem(ModItems.DARK_APPLE, "ダークアップル");
         addBlock(ModBlocks.DARK_APPLE_PIE, "ダークアップルパイ");
 

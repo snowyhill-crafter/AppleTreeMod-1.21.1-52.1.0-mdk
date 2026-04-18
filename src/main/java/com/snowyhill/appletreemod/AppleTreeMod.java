@@ -1,10 +1,7 @@
 package com.snowyhill.appletreemod;
 
 import com.mojang.logging.LogUtils;
-import com.snowyhill.appletreemod.registry.ModBlocks;
-import com.snowyhill.appletreemod.registry.ModFlammables;
-import com.snowyhill.appletreemod.registry.ModItems;
-import com.snowyhill.appletreemod.registry.ModTabs;
+import com.snowyhill.appletreemod.registry.*;
 import com.snowyhill.appletreemod.worldgen.features.decolator.ModTreeDecorators;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -29,10 +26,15 @@ public class AppleTreeMod {
         modEventBus.addListener(this::commonSetup);
 
         // レジストリをイベントバスに登録
-        ModItems.register(modEventBus);
-        ModTabs.register(modEventBus);
+        // 1. Blocks (EntitiesやItemsが参照するため最初)
         ModBlocks.register(modEventBus);
-
+        // 2. Entities (Itemsがボートアイテムを作る際に参照するため)
+        ModEntities.register(modEventBus);
+        // 3. Items
+        ModItems.register(modEventBus);
+        // 4. その他
+        ModBlockEntities.register(modEventBus);
+        ModTabs.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);

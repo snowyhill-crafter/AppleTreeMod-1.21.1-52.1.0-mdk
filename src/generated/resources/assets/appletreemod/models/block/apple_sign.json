@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/sign",
+  "textures": {
+    "particle": "appletreemod:block/apple_planks"
+  }
+}

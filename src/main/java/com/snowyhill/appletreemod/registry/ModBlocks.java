@@ -2,6 +2,7 @@ package com.snowyhill.appletreemod.registry;
 
 import com.snowyhill.appletreemod.AppleTreeMod;
 import com.snowyhill.appletreemod.block.*;
+import com.snowyhill.appletreemod.client.ModWoodTypes;
 import com.snowyhill.appletreemod.worldgen.tree.ModTreeGrowers;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -9,6 +10,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -104,7 +106,7 @@ public class ModBlocks {
             "apple_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     // ハーフブロック
-    public static final RegistryObject<Block> APPLE_SLAB = BLOCKS.register(
+public static final RegistryObject<Block> APPLE_SLAB = BLOCKS.register(
             "apple_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     // 階段
@@ -227,6 +229,100 @@ public class ModBlocks {
             "dark_apple_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.OAK,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+
+
+
+    public static final RegistryObject<Block> APPLE_SIGN = BLOCKS.register("apple_sign",
+            () -> new ModStandingSignBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(1.0F)
+                            .sound(SoundType.WOOD)
+                            .noOcclusion() //光・描写を阻害しない
+                            .noCollission(), //衝突無し
+                    ModWoodTypes.APPLE
+            ));
+
+    public static final RegistryObject<Block> APPLE_WALL_SIGN = BLOCKS.register("apple_wall_sign",
+            () -> new ModWallSignBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(1.0F)
+                            .sound(SoundType.WOOD)
+                            .noOcclusion() //光・描写を阻害しない
+                            .noCollission(), //衝突無し
+                    ModWoodTypes.APPLE
+            ));
+
+    public static final RegistryObject<Block> APPLE_HANGING_SIGN = BLOCKS.register("apple_hanging_sign",
+            () -> new ModCeilingHangingSignBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(1.0F)
+                            .sound(SoundType.WOOD)
+                            .noOcclusion() //光・描写を阻害しない
+                            .noCollission(), //衝突無し
+                    ModWoodTypes.APPLE
+            ));
+
+    public static final RegistryObject<Block> APPLE_WALL_HANGING_SIGN = BLOCKS.register("apple_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(1.0F)
+                            .sound(SoundType.WOOD)
+                            .noOcclusion() //光・描写を阻害しない
+                            .noCollission(), //衝突無し
+                    ModWoodTypes.APPLE
+            ));
+
+
+    public static final RegistryObject<Block> DARK_APPLE_SIGN = BLOCKS.register("dark_apple_sign",
+            () -> new ModStandingSignBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(1.0F)
+                            .sound(SoundType.WOOD)
+                            .noOcclusion() //光・描写を阻害しない
+                            .noCollission(), //衝突無し
+                    ModWoodTypes.DARK_APPLE
+            ));
+
+    public static final RegistryObject<Block> DARK_APPLE_WALL_SIGN = BLOCKS.register("dark_apple_wall_sign",
+            () -> new ModWallSignBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(1.0F)
+                            .sound(SoundType.WOOD)
+                            .noOcclusion() //光・描写を阻害しない
+                            .noCollission(), //衝突無し
+                    ModWoodTypes.DARK_APPLE
+            ));
+
+    public static final RegistryObject<Block> DARK_APPLE_HANGING_SIGN = BLOCKS.register("dark_apple_hanging_sign",
+            () -> new ModCeilingHangingSignBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(1.0F)
+                            .sound(SoundType.WOOD)
+                            .noOcclusion() //光・描写を阻害しない
+                            .noCollission(), //衝突無し
+                    ModWoodTypes.DARK_APPLE
+            ));
+
+    public static final RegistryObject<Block> DARK_APPLE_WALL_HANGING_SIGN = BLOCKS.register("dark_apple_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(1.0F)
+                            .sound(SoundType.WOOD)
+                            .noOcclusion() //光・描写を阻害しない
+                            .noCollission(), //衝突無し
+                    ModWoodTypes.DARK_APPLE
+            ));
+
+
+
 
 
 

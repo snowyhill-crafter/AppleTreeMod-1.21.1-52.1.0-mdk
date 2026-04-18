@@ -68,6 +68,27 @@ public class ModRecipeProvider extends RecipeProvider {
                 ModBlocks.APPLE_PRESSURE_PLATE.get(),
                 ModBlocks.APPLE_PLANKS.get());
 
+        // 看板
+        signBuilder(ModItems.APPLE_SIGN_ITEM.get(), Ingredient.of(ModBlocks.APPLE_PLANKS.get()))
+                .unlockedBy("has_apple_planks", has(ModBlocks.APPLE_PLANKS.get()))
+                .save(pRecipeOutput);
+        hangingSign(pRecipeOutput, ModItems.APPLE_HANGING_SIGN_ITEM.get(), ModBlocks.STRIPPED_APPLE_LOG.get());
+
+// ボートレシピ (ShapedRecipeBuilder を使用)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.APPLE_BOAT.get())
+                .pattern("P P")
+                .pattern("PPP")
+                .define('P', ModBlocks.APPLE_PLANKS.get())
+                .unlockedBy("has_apple_planks", has(ModBlocks.APPLE_PLANKS.get()))
+                .save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, ModItems.APPLE_CHEST_BOAT.get())
+                .requires(Items.CHEST)
+                .requires(ModItems.APPLE_BOAT.get())
+                .unlockedBy("has_apple_boat", has(ModItems.APPLE_BOAT.get()))
+                .save(pRecipeOutput);
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModBlocks.APPLE_PIE.get()) // BlockでもOK（ItemLike）
                 .pattern("AAA")
                 .pattern("SES")
@@ -122,6 +143,26 @@ public class ModRecipeProvider extends RecipeProvider {
         pressurePlate(pRecipeOutput,
                 ModBlocks.DARK_APPLE_PRESSURE_PLATE.get(),
                 ModBlocks.DARK_APPLE_PLANKS.get());
+
+        // 看板
+        signBuilder(ModItems.DARK_APPLE_SIGN_ITEM.get(), Ingredient.of(ModBlocks.DARK_APPLE_PLANKS.get()))
+                .unlockedBy("has_dark_apple_planks", has(ModBlocks.DARK_APPLE_PLANKS.get()))
+                .save(pRecipeOutput);
+        hangingSign(pRecipeOutput, ModItems.DARK_APPLE_HANGING_SIGN_ITEM.get(), ModBlocks.STRIPPED_DARK_APPLE_LOG.get());
+
+// ダークアップルボート
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.DARK_APPLE_BOAT.get())
+                .pattern("P P")
+                .pattern("PPP")
+                .define('P', ModBlocks.DARK_APPLE_PLANKS.get())
+                .unlockedBy("has_dark_apple_planks", has(ModBlocks.DARK_APPLE_PLANKS.get()))
+                .save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, ModItems.DARK_APPLE_CHEST_BOAT.get())
+                .requires(Items.CHEST)
+                .requires(ModItems.DARK_APPLE_BOAT.get())
+                .unlockedBy("has_dark_apple_boat", has(ModItems.DARK_APPLE_BOAT.get()))
+                .save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModBlocks.DARK_APPLE_PIE.get()) // BlockでもOK（ItemLike）
                 .pattern("AAA")

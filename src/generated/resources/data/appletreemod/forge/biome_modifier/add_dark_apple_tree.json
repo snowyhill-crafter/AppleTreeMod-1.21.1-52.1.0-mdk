@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#appletreemod:dark_apple_tree_spawnable",
+  "features": "appletreemod:dark_apple_tree",
+  "step": "vegetal_decoration"
+}

@@ -36,6 +36,10 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.APPLE_TRAPDOOR, "Apple Trapdoor");
         addBlock(ModBlocks.APPLE_BUTTON, "Apple Button");
         addBlock(ModBlocks.APPLE_PRESSURE_PLATE, "Apple Pressure Plate");
+        addBlock(ModBlocks.APPLE_SIGN, "Apple Sign");
+        addBlock(ModBlocks.APPLE_HANGING_SIGN, "Apple Hanging Sign");
+        addItem(ModItems.APPLE_BOAT, "Apple Boat");
+        addItem(ModItems.APPLE_CHEST_BOAT, "Apple Chest Boat");
 
         addBlock(ModBlocks.APPLE_PIE, "Apple Pie");
 
@@ -60,6 +64,12 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addBlock(ModBlocks.DARK_APPLE_TRAPDOOR, "Dark Apple Trapdoor");
         addBlock(ModBlocks.DARK_APPLE_BUTTON, "Dark Apple Button");
         addBlock(ModBlocks.DARK_APPLE_PRESSURE_PLATE, "Dark Apple Pressure Plate");
+        addBlock(ModBlocks.DARK_APPLE_SIGN, "Dark Apple Sign");
+        addBlock(ModBlocks.DARK_APPLE_HANGING_SIGN, "Dark Apple Hanging Sign");
+        addItem(ModItems.DARK_APPLE_BOAT, "Dark Apple Boat");
+        addItem(ModItems.DARK_APPLE_CHEST_BOAT, "Dark Apple Chest Boat");
+
+
         addItem(ModItems.DARK_APPLE, "Dark Apple");
         addBlock(ModBlocks.DARK_APPLE_PIE, "Dark Apple Pie");
 

@@ -32,6 +32,7 @@ public class ModTabs {
                         pOutput.accept(ModItems.APPLE_WOOD_ITEM.get());
                         pOutput.accept(ModItems.STRIPPED_APPLE_WOOD_ITEM.get());
                         pOutput.accept(ModItems.APPLE_LEAVES_ITEM.get());
+                        pOutput.accept(ModItems.APPLE_FLOWER_LEAVES_ITEM.get());
                         pOutput.accept(ModItems.ORNAMENTAL_APPLE_FLOWER_LEAVES_ITEM.get());
                         pOutput.accept(ModItems.ORNAMENTAL_APPLE_UNRIPE_LEAVES_ITEM.get());
                         pOutput.accept(ModItems.ORNAMENTAL_APPLE_FRUIT_LEAVES_ITEM.get());
@@ -45,6 +46,10 @@ public class ModTabs {
                         pOutput.accept(ModItems.APPLE_TRAPDOOR_ITEM.get());
                         pOutput.accept(ModItems.APPLE_BUTTON_ITEM.get());
                         pOutput.accept(ModItems.APPLE_PRESSURE_PLATE_ITEM.get());
+                        pOutput.accept(ModItems.APPLE_SIGN_ITEM.get());
+                        pOutput.accept(ModItems.APPLE_HANGING_SIGN_ITEM.get());
+                        pOutput.accept(ModItems.APPLE_BOAT.get());
+                        pOutput.accept(ModItems.APPLE_CHEST_BOAT.get());
 
                         pOutput.accept(ModItems.DARK_APPLE_SAPLING_ITEM.get());
                         pOutput.accept(ModItems.DARK_APPLE_LOG_ITEM.get());
@@ -52,6 +57,7 @@ public class ModTabs {
                         pOutput.accept(ModItems.DARK_APPLE_WOOD_ITEM.get());
                         pOutput.accept(ModItems.STRIPPED_DARK_APPLE_WOOD_ITEM.get());
                         pOutput.accept(ModItems.DARK_APPLE_LEAVES_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_FLOWER_LEAVES_ITEM.get());
                         pOutput.accept(ModItems.ORNAMENTAL_DARK_APPLE_FLOWER_LEAVES_ITEM.get());
                         pOutput.accept(ModItems.ORNAMENTAL_DARK_APPLE_UNRIPE_LEAVES_ITEM.get());
                         pOutput.accept(ModItems.ORNAMENTAL_DARK_APPLE_FRUIT_LEAVES_ITEM.get());
@@ -65,6 +71,10 @@ public class ModTabs {
                         pOutput.accept(ModItems.DARK_APPLE_TRAPDOOR_ITEM.get());
                         pOutput.accept(ModItems.DARK_APPLE_BUTTON_ITEM.get());
                         pOutput.accept(ModItems.DARK_APPLE_PRESSURE_PLATE_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_SIGN_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_HANGING_SIGN_ITEM.get());
+                        pOutput.accept(ModItems.DARK_APPLE_BOAT.get());
+                        pOutput.accept(ModItems.DARK_APPLE_CHEST_BOAT.get());
 
                         pOutput.accept(ModItems.DARK_APPLE.get());
                         pOutput.accept(ModItems.APPLE_PIE_ITEM.get());

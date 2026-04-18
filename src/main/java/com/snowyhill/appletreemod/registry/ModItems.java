@@ -1,9 +1,13 @@
 package com.snowyhill.appletreemod.registry;
 
 import com.snowyhill.appletreemod.AppleTreeMod;
+import com.snowyhill.appletreemod.entity.ModBoatEntity;
+import com.snowyhill.appletreemod.item.ModBoatItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SignItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -228,8 +232,38 @@ public class ModItems {
             )
     );
 
+    // --- リンゴの看板 ---
+    public static final RegistryObject<Item> APPLE_SIGN_ITEM = ITEMS.register("apple_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16),
+                    ModBlocks.APPLE_SIGN.get(), ModBlocks.APPLE_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> APPLE_HANGING_SIGN_ITEM = ITEMS.register("apple_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.APPLE_HANGING_SIGN.get(), ModBlocks.APPLE_WALL_HANGING_SIGN.get(),
+                    new Item.Properties().stacksTo(16)));
+
+    // --- ダークアップルの看板 ---
+    public static final RegistryObject<Item> DARK_APPLE_SIGN_ITEM = ITEMS.register("dark_apple_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16),
+                    ModBlocks.DARK_APPLE_SIGN.get(), ModBlocks.DARK_APPLE_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> DARK_APPLE_HANGING_SIGN_ITEM = ITEMS.register("dark_apple_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.DARK_APPLE_HANGING_SIGN.get(), ModBlocks.DARK_APPLE_WALL_HANGING_SIGN.get(),
+                    new Item.Properties().stacksTo(16)));
 
 
+    // --- リンゴのボート ---
+    public static final RegistryObject<Item> APPLE_BOAT = ITEMS.register("apple_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.APPLE, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> APPLE_CHEST_BOAT = ITEMS.register("apple_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.APPLE, new Item.Properties().stacksTo(1)));
+
+    // --- ダークアップルのボート ---
+    public static final RegistryObject<Item> DARK_APPLE_BOAT = ITEMS.register("dark_apple_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.DARK_APPLE, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> DARK_APPLE_CHEST_BOAT = ITEMS.register("dark_apple_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.DARK_APPLE, new Item.Properties().stacksTo(1)));
 
 
 
