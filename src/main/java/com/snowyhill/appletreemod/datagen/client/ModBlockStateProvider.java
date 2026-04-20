@@ -35,6 +35,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockWithItem(ModBlocks.APPLE_PLANKS);
         sapling(ModBlocks.APPLE_SAPLING);
+        flowerPotCross(ModBlocks.POTTED_APPLE_SAPLING.get(), modLoc("block/apple_sapling"));
 
         stairsBlock((StairBlock) ModBlocks.APPLE_STAIRS.get(), blockTexture(ModBlocks.APPLE_PLANKS.get()));
 
@@ -82,6 +83,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockWithItem(ModBlocks.DARK_APPLE_PLANKS);
         sapling(ModBlocks.DARK_APPLE_SAPLING);
+        flowerPotCross(ModBlocks.POTTED_DARK_APPLE_SAPLING.get(), modLoc("block/dark_apple_sapling"));
 
         stairsBlock((StairBlock) ModBlocks.DARK_APPLE_STAIRS.get(), blockTexture(ModBlocks.DARK_APPLE_PLANKS.get()));
         slabBlock((SlabBlock) ModBlocks.DARK_APPLE_SLAB.get(),
@@ -143,5 +145,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
                         blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void flowerPotCross(Block pottedBlock, ResourceLocation plantTexture) {
+        String path = ForgeRegistries.BLOCKS.getKey(pottedBlock).getPath();
+
+        ModelFile model = models().singleTexture(
+                path,
+                ResourceLocation.withDefaultNamespace("block/flower_pot_cross"),
+                "plant",
+                plantTexture
+        ).renderType("cutout");
+
+        simpleBlock(pottedBlock, model);
     }
 }

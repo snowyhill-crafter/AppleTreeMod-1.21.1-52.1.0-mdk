@@ -73,7 +73,10 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addItem(ModItems.DARK_APPLE, "Dark Apple");
         addBlock(ModBlocks.DARK_APPLE_PIE, "Dark Apple Pie");
 
-
+        add("entity.appletreemod.apple_boat", "Apple Boat");
+        add("entity.appletreemod.apple_chest_boat", "Apple Chest Boat");
+        add("entity.appletreemod.dark_apple_boat", "Dark Apple Boat");
+        add("entity.appletreemod.dark_apple_chest_boat", "Dark Apple Chest Boat");
         add("creativetabs.Mod_tab", "appletreemod");
 
 

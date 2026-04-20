@@ -73,7 +73,10 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addItem(ModItems.DARK_APPLE, "ダークアップル");
         addBlock(ModBlocks.DARK_APPLE_PIE, "ダークアップルパイ");
 
-
+        add("entity.appletreemod.apple_boat", "リンゴのボート");
+        add("entity.appletreemod.apple_chest_boat", "チェスト付きのリンゴのボート");
+        add("entity.appletreemod.dark_apple_boat", "ダークアップルのボート");
+        add("entity.appletreemod.dark_apple_chest_boat", "チェスト付きのダークアップルのボート");
         add("creativetabs.Mod_tab", "リンゴの木MOD");
 
 
