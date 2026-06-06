@@ -128,6 +128,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.DARK_APPLE_SLAB.get()
         );
 
+        this.tag(BlockTags.WOODEN_SLABS).add(
+                ModBlocks.APPLE_SLAB.get(),
+                ModBlocks.DARK_APPLE_SLAB.get()
+        );
+
+
+
         this.tag(BlockTags.STAIRS).add(
                 ModBlocks.APPLE_STAIRS.get(),
                 ModBlocks.DARK_APPLE_STAIRS.get()

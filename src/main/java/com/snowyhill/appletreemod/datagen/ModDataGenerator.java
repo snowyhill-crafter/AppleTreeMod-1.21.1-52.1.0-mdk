@@ -52,7 +52,9 @@ public class ModDataGenerator {
             // GlobalLootModifier
             generator.addProvider(event.includeServer(),
                     new ModGlobalLootModifierProvider(packOutput, lookupProvider));
-
+            // Biome Tags
+            generator.addProvider(event.includeServer(),
+                    new ModBiomeTagsProvider(packOutput, lookupProvider, existingFileHelper));
 
 
         }
